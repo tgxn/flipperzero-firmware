@@ -11,6 +11,7 @@
 bool timerStarted = false;
 int timerSecs = 0;
 int songSelect = 0;
+
 typedef enum {
     EventTypeTick,
     EventTypeKey,
@@ -73,7 +74,6 @@ static void clock_render_callback(Canvas* const canvas, void* ctx) {
     } else {
         elements_button_center(canvas, "Start");
     }
-
     if(songSelect == 0) {
         elements_button_right(canvas, "S:OFF");
     } else if(songSelect == 1) {
